@@ -4,6 +4,7 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         //implementation of BUBBLE SORT
+
         int[] arr = {7,8,3,1,2};
         //time complexity = O(n^2)
        for(int i = 0 ; i < arr.length - 1 ; i++){
@@ -22,5 +23,5 @@ public class BubbleSort {
        for(int i = 0 ;i < arr.length ; i++){
            System.out.print(arr[i] + "");
        }
-    }
+    }//if you like the code please give a follow back on github! happy Coding
 }
