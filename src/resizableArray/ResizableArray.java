@@ -1,6 +1,7 @@
 package resizableArray;
 
 public class ResizableArray {
+    //this way we can nullify the drawback of ARRAY that its not resizeable
     private Integer[] arr;
     private int size;
     private int capacity;
@@ -10,7 +11,7 @@ public class ResizableArray {
         this.size = 0;
         this.capacity = 2;
     }
-
+//this is method to add new element to the back of the the array
     public void push(int elementToPush) {
         if (size < capacity) {
             arr[size] = elementToPush;
@@ -27,7 +28,7 @@ public class ResizableArray {
         }
 
     }
-
+//method to print the array
     public void printArray() {
         for (int i = 0; i < size; i++) {
             System.out.println(arr[i]);
