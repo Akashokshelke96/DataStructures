@@ -2,7 +2,6 @@ package com.sourceCode.recursion;
 
 public class printKeypadCombination {
     public static String[] keypad = {".","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz"};
-
     public static void printCombination(String str,int idx,String combination){
         if(idx==str.length()){
             System.out.println(combination);
@@ -10,7 +9,7 @@ public class printKeypadCombination {
         }
 
         char currChar = str.charAt(idx);
-        String mapping = keypad[currChar - '0'];
+        String mapping = keypad[currChar-'0'];
 
         for(int i = 0 ;i < mapping.length(); i++){
             printCombination(str,idx+1,combination + mapping.charAt(i));
