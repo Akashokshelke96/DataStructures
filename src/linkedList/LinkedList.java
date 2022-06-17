@@ -2,6 +2,7 @@ package linkedList;
 
 public class LinkedList {
     private Node head;
+    private int size;
 
     public LinkedList(){
         head = null;
@@ -37,6 +38,7 @@ public class LinkedList {
             }
             curr.setNext(newNode);              //setting the newNode as next of current element;
         }
+        size++;
     }
 
     public void insertAtFront(char data){
@@ -48,6 +50,7 @@ public class LinkedList {
             newNode.setNext(head);  //since head is the one pointing to the first Node in the list..
             head = newNode;
         }
+        size++;
     }
 
     public void insertAtIndex(int position ,char data){
@@ -67,6 +70,7 @@ public class LinkedList {
         }
         newNode.setNext(curr.getNext());
         curr.setNext(newNode);
+        size++;
     }
 
 
@@ -75,6 +79,7 @@ public class LinkedList {
         if(head != null) {
             head = head.getNext();
         }
+        size--;
     }
 
     public void deleteAtEnd(){
@@ -89,6 +94,30 @@ public class LinkedList {
         else if(head != null && head.getNext() == null){
             head = null;
         }
+        size--;
+    }
+
+    public int size(){
+        return size;
+    }
+
+    public void reverseIterate(){
+        if(head == null || head.getNext() == null){
+            return;
+        }
+        Node prevNode  = head;
+        Node currNode = head.getNext();
+
+        while(currNode != null){
+            Node nextNode = currNode.getNext();
+            currNode.setNext(prevNode);
+
+            //update
+            prevNode = currNode;
+            currNode = nextNode;
+        }
+        head.setNext(null);
+        head = prevNode;
     }
 
 }

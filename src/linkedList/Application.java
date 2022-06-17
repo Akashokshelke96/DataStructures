@@ -19,7 +19,12 @@ public class Application {
         ll.deleteAtFront();
         ll.deleteAtEnd();
 
+        //reversign a linked list
+        ll.reverseIterate();
         ll.traverse();
+
+
+        System.out.println(ll.size());
 
 
 
