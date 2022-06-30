@@ -14,5 +14,6 @@ public class Main {
         arr.push(2);
 
         arr.printArray();
+
     }
 }

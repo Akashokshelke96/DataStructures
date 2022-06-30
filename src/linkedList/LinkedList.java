@@ -1,7 +1,7 @@
 package linkedList;
 
 public class LinkedList {
-    private Node head;
+    public Node head;
     private int size;
 
     public LinkedList(){
@@ -115,9 +115,18 @@ public class LinkedList {
             //update
             prevNode = currNode;
             currNode = nextNode;
-        }
+        }//when currentNode becomes null and to cut the head pointing to the first node in original ll  and prevNode will becomes head;
         head.setNext(null);
         head = prevNode;
+    }
+
+    public Node reverseRecursive(Node head){
+        if(head == null || head.next == null){
+            return head;
+        }
+        Node newHead = reverseRecursive(head.next);
+        head.next.next = null;
+        return newHead;
     }
 
 }

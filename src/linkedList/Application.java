@@ -18,10 +18,16 @@ public class Application {
         ll.insertAtIndex(2,'X');
         ll.deleteAtFront();
         ll.deleteAtEnd();
-
-        //reversign a linked list
-        ll.reverseIterate();
         ll.traverse();
+        System.out.println("==============");
+        //reversign a linked list
+//        ll.reverseIterate();
+//        ll.traverse();
+        System.out.println("==============");
+
+        ll.head = ll.reverseRecursive(ll.head);
+        ll.traverse();
+
 
 
         System.out.println(ll.size());
