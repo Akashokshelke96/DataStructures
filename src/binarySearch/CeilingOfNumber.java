@@ -3,6 +3,7 @@ package binarySearch;
 public class CeilingOfNumber {
     public static void main(String[] args) {
         //find the smallest element in array which is greater or equal to target element;
+        //leetcode solution
         int arr[]  = {2,3,4,5,6,12,13,14,16,18,20};
         System.out.println(findCeil(arr,17));
     }
